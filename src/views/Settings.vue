@@ -9,7 +9,7 @@ export default {
   methods: {
     changeCounter() {
       this.$store.commit('increment', {id: 'settingsCounter'})
-      return
+
     }
   },
   computed: {

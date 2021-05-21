@@ -10,7 +10,7 @@ export default {
   methods: {
     changeCounter() {
       this.$store.commit('increment', {id: 'applicationsCounter'})
-      return
+
     }
   },
   computed: {
