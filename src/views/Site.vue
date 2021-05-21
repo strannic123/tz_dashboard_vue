@@ -1,10 +1,11 @@
 <template lang="pug">
-h2 О нас
+h2 Страница Сайт
+
 </template>
 
 <script>
 export default {
-  name: "About"
+  name: "Site"
 }
 </script>
 

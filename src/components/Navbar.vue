@@ -1,0 +1,66 @@
+<template lang="pug">
+.navbar
+  .container
+    .navbar_row
+      .logo
+        img(src="../assets/icons/logo.png")
+      .search
+        input(type="text" placeholder="search")
+      .btn_navbar
+        button(class="btn_exit")
+          span Выход
+</template>
+
+<script>
+export default {
+  name: "Navbar"
+}
+</script>
+
+<style lang="scss" scoped>
+.navbar_row{
+  display: flex;
+  margin-bottom: 10px;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background: #EBECED;
+  border-radius: 6px;
+  & input {
+    padding-left: 20px;
+    width: 250px;
+    height: 30px;
+    border: 1px solid #41B883;
+    border-radius: 40px;
+    background: url("../assets/icons/icons-search.png") no-repeat;
+    background-position: left;
+  }
+  & img{
+    margin: 7px 0px 0px 4px;
+    max-width: 60px;
+  }
+  & .btn_navbar{
+    & button{
+      margin-right: 5px;
+      padding: 8px 17px;
+      border: 1px solid #41B883;
+      border-radius: 6px;
+      background: #41B883;
+      cursor: pointer;
+      &:hover{
+        -webkit-box-shadow: 0px 0px 13px -5px rgba(34, 60, 80, 0.6);
+        -moz-box-shadow: 0px 0px 13px -5px rgba(34, 60, 80, 0.6);
+        box-shadow: 0px 0px 13px -5px rgba(34, 60, 80, 0.6);
+      }
+    }
+    & span {
+      padding: 10px;
+      color: #EBECED;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+
+}
+
+</style>
