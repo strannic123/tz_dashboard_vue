@@ -1,6 +1,7 @@
 <template lang="pug">
 .content
   h2 Главная
+  p счетчик посещений: {{viewCount}}
   .container
     .content_row
       router-view
@@ -9,7 +10,24 @@
 
 <script>
 export default {
-  name: "Home"
+  name: "Home",
+  methods: {
+    changeCounter() {
+      this.$store.commit('increment', {id: 'homeCounter'})
+      return
+    }
+  },
+  computed: {
+    viewCount(){
+      return this.$store.state.homeCounter
+    },
+
+  },
+  mounted() {
+    this.changeCounter()
+  }
+
+
 }
 </script>
 

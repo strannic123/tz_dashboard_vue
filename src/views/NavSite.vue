@@ -17,12 +17,14 @@ import LeftMenu from "../components/LeftMenu";
 import Navbar from "../components/Navbar";
 import Home from "../components/Home";
 
+
 export default {
   name: 'NavSite',
   components: {
     LeftMenu,
     Navbar,
-    Home
+    Home,
+
   }
 }
 </script>
