@@ -1,5 +1,11 @@
 # dashboard_pug
 
+## Сделано на основе ТЗ
+
+## ![Imgur](https://i.imgur.com/FL7WI9N.jpg)
+
+## ![Imgur](https://i.imgur.com/nKW9fRs.gif)
+
 ## Project setup
 ```
 npm install
