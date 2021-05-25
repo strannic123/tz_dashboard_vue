@@ -6,7 +6,7 @@
         Navbar
       .home__menu-content
         .home__left-menu
-          LeftMenu
+          component(:is="dynamicMenu? 'LeftMenu' : 'LayoutSettingsLeftMenu'")
         .home__content
           router-view
 
@@ -16,6 +16,8 @@
 import LeftMenu from "../components/LeftMenu";
 import Navbar from "../components/Navbar";
 import Home from "../components/Home";
+import LayoutSettingsLeftMenu from "../layout/LayoutSettingsLeftMenu";
+
 
 
 export default {
@@ -24,10 +26,18 @@ export default {
     LeftMenu,
     Navbar,
     Home,
+    LayoutSettingsLeftMenu
 
+  },
+  computed: {
+    dynamicMenu(){
+      console.log(this.$route.path)
+      return this.$route.path !== '/settings';
+    }
   }
 }
 </script>
+
 <style lang="scss">
 .home__menu-content{
   display: flex;

@@ -21,6 +21,8 @@ export default {
   },
   mounted() {
     this.changeCounter()
+    this.$toast.show(`Это страница "Заявки"`)
+    setTimeout(this.$toast.clear, 3000)
   }
 }
 </script>

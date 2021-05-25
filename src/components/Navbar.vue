@@ -7,13 +7,18 @@
       .search
         input(type="text" placeholder="search")
       .btn_navbar
-        button(class="btn_exit")
+        button(class="btn_exit" @click="handleClick")
           span Выход
 </template>
 
 <script>
 export default {
-  name: "Navbar"
+  name: "Navbar",
+  methods: {
+    handleClick(){
+      this.$router.push('/')
+    }
+  }
 }
 </script>
 

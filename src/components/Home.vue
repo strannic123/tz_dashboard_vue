@@ -9,13 +9,14 @@
 </template>
 
 <script>
+
+
 export default {
   name: "Home",
   methods: {
     changeCounter() {
       this.$store.commit('increment', {id: 'homeCounter'})
     },
-
   },
   computed: {
     viewCount(){
@@ -25,6 +26,8 @@ export default {
   },
   mounted() {
     this.changeCounter()
+    this.$toast.show(`Это "Главная" страница`)
+    setTimeout(this.$toast.clear, 3000)
   }
 
 

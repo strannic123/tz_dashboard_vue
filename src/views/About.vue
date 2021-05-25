@@ -9,7 +9,8 @@ export default {
   methods: {
     changeCounter() {
       this.$store.commit('increment', {id: 'aboutCounter'})
-    }
+    },
+
   },
   computed: {
     viewCount(){
@@ -19,10 +20,12 @@ export default {
   },
   mounted() {
     this.changeCounter()
+    this.$toast.show(`Это страница "О нас"`)
+    setTimeout(this.$toast.clear, 3000)
   }
 }
 </script>
 
-<style scoped>
+<!--<style scoped>-->
 
-</style>
+<!--</style>-->
