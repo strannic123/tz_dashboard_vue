@@ -32,13 +32,17 @@ export default {
   background: #EBECED;
   border-radius: 6px;
   & input {
-    padding-left: 20px;
+    padding-left: 30px;
     width: 250px;
     height: 30px;
     border: 1px solid #41B883;
     border-radius: 40px;
     background: url("../assets/icons/icons-search.png") no-repeat;
-    background-position: left;
+    background-position: 10px;
+    &:active, &:hover, &:focus {
+      outline: 0;
+      outline-offset: 0;
+    }
   }
   & .logo:hover {
     cursor: pointer;
