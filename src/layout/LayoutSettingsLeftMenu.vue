@@ -11,7 +11,7 @@
       p(v-for="user in listModerator") {{user.name}}
 
       .user Пользователи
-      p(v-for="user in listModerator") {{user.name}}
+      p(v-for="user in listUser") {{user.name}}
 
 
 
@@ -27,23 +27,18 @@ export default {
     const users = store.state.users
 
 
-
-
     return {
       users
     }
   },
   computed: {
     listAdmin(){
-      console.log(this.users)
       return this.users.filter(user => user.typeUser === 'Администратор')
     },
     listModerator(){
-      console.log(this.users)
       return this.users.filter(user => user.typeUser === 'Модератор')
     },
     listUser(){
-      console.log(this.users)
       return this.users.filter(user => user.typeUser === 'Пользователь')
     }
   }

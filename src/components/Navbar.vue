@@ -3,7 +3,7 @@
   .container
     .navbar_row
       .logo
-        img(src="../assets/icons/logo.png")
+        img(src="../assets/icons/logo.png" @click="handleClick")
       .search
         input(type="text" placeholder="search")
       .btn_navbar
@@ -39,6 +39,9 @@ export default {
     border-radius: 40px;
     background: url("../assets/icons/icons-search.png") no-repeat;
     background-position: left;
+  }
+  & .logo:hover {
+    cursor: pointer;
   }
   & img{
     margin: 7px 0px 0px 4px;

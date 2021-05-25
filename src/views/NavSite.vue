@@ -8,6 +8,7 @@
         .home__left-menu
           component(:is="dynamicMenu? 'LeftMenu' : 'LayoutSettingsLeftMenu'")
         .home__content
+          Breadcrumbs
           router-view
 
 </template>
@@ -17,6 +18,7 @@ import LeftMenu from "../components/LeftMenu";
 import Navbar from "../components/Navbar";
 import Home from "../components/Home";
 import LayoutSettingsLeftMenu from "../layout/LayoutSettingsLeftMenu";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 
 
@@ -26,12 +28,12 @@ export default {
     LeftMenu,
     Navbar,
     Home,
-    LayoutSettingsLeftMenu
+    LayoutSettingsLeftMenu,
+    Breadcrumbs
 
   },
   computed: {
     dynamicMenu(){
-      console.log(this.$route.path)
       return this.$route.path !== '/settings';
     }
   }
@@ -55,7 +57,13 @@ export default {
     margin-left: 10px;
     background: #E6E8EB;
     border-radius: 6px;
+    padding: 15px;
 
+
+    & .breadcrumbs{
+      display: flex;
+      justify-content: flex-start;
+    }
   }
 }
 h1 {
